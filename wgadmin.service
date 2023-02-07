@@ -1,0 +1,20 @@
+[Unit]
+Description=WireGuard Administration Server
+
+[Service]
+Type=simple
+User=root
+Group=root
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+
+Restart=always
+RestartSec=5s
+
+WorkingDirectory=/etc
+ExecStart=/usr/local/bin/wgadmin
+
+PermissionsStartOnly=true
+SyslogIdentifier=wgadmin
+
+[Install]
+WantedBy=multi-user.target
