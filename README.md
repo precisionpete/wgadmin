@@ -32,12 +32,13 @@ Download the `wgadmin.service` file and place it in `/lib/systemd/system`
 - [wgadmin.service](https://dist.2ho.ca/dist/wgadmin/wgadmin.service)
 
 Enable and start it
-`
+```
     chown root:root /usr/local/bin/wgadmin
     chmod 755       /usr/local/bin/wgadmin
     systemctl daemon-reload
     systemctl enable wgadmin.service
-    systemctl start wgadmin.service`
+    systemctl start wgadmin.service
+```
     
 # How it Works
 
