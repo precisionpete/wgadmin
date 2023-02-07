@@ -46,5 +46,5 @@ WGAdmin needs to run as a service. WGAdmin will be responsible for starting and 
 i.e. You do not install `wg-quick@wg0` etc. 
 
 It is possible to use `wg-quick` for other tunnels that are separate from 
-the interface managed by WGAdmin. e.g. Let WGAdmin manage `wg0` and `wg-quick` manage `wg1` etc.
+the interface managed by WGAdmin. e.g. let WGAdmin manage `wg0` and `wg-quick` manage `wg1` etc.
   
