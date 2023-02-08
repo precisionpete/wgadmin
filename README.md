@@ -42,13 +42,13 @@ Download the appropriate `wgadmin` binary for your architecture and place is in 
 Download the `wgadmin.service` file and place it in `/lib/systemd/system`
 - [wgadmin.service](https://dist.2ho.ca/dist/wgadmin/wgadmin.service)
 
-Enable and start it (as root)
+Enable and start it
 ```
-chown root:root /usr/local/bin/wgadmin
-chmod 755       /usr/local/bin/wgadmin
-systemctl daemon-reload
-systemctl enable wgadmin.service
-systemctl start wgadmin.service
+sudo chown root:root /usr/local/bin/wgadmin
+sudo chmod 755       /usr/local/bin/wgadmin
+sudo systemctl daemon-reload
+sudo systemctl enable wgadmin.service
+sudo systemctl start wgadmin.service
 ```
     
 # Additional Manual Configuration 
