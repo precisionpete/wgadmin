@@ -118,21 +118,13 @@ It's best to set up a Dynamic DNS name for your gateway. This way nothing will n
 
 The wgadmin app keeps its configuration in /etc/wgadmin.json. There are several additional user changeable parameters that are not represented in the GUI. Be sure to stop the wgadmin service before making changes or they risk being overwritten.
 
-**WgInterface**
-The WireGuard interface name. Defaults to wg0.
-
-**HttpListen**
-The IP and Port running the Web GUI. Defaults to 0.0.0.0:8000. Note: 0.0.0.0 means listen on all interfaces. The app runs as root so ports below 1024 are possible if they are free. e.g. 80
-
-**Username**
-A blank username will trigger the initialization page. Here you can create a new Username and Password. i.e. This is how you reset a forgotten password. Edit the Username field and set it to `"Username": "",`
-
-**Password**
-This stores a bcrypt hash of the password. Setting it to blank will trigger the initialization page as above.
-
 <dl>
-  <dt>Lower cost</dt>
-  <dd>The new version of this product costs significantly less than the previous one!</dd>
-  <dt>Easier to use</dt>
-  <dd>We've changed the product so that it's much easier to use!</dd>
+  <dt>WgInterface</dt>
+  <dd>The WireGuard interface name. Defaults to `wg0`.</dd>
+  <dt>HttpListen</dt>
+  <dd>The IP and Port running the Web GUI. Defaults to 0.0.0.0:8000. Note: 0.0.0.0 means listen on all interfaces. The app runs as root so ports below 1024 are possible if they are free. e.g. 80</dd>
+  <dt>Username</dt>
+  <dd>A blank username will trigger the initialization page. Here you can create a new Username and Password. i.e. This is how you reset a forgotten password. Edit the Username field and set it to `"Username": "",`</dd>
+  <dt>Password</dt>
+  <dd>This stores a bcrypt hash of the password. Setting it to blank will trigger the initialization page as above.</dd>
 </dl>
