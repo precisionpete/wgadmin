@@ -11,7 +11,6 @@ Architecturally, WGAdmin is a configuration management layer wrapped around the 
 
 WGAdmin needs to run as a daemon. WGAdmin will be responsible for starting and stopping the WireGuard tunnels. 
 i.e. You do not install `wg-quick@wg0` etc. 
-
 It is possible to use `wg-quick` for other tunnels that are separate from 
 the interface managed by WGAdmin. e.g. let WGAdmin manage `wg0` and `wg-quick` manage `wg1` etc.
   
