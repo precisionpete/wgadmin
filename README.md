@@ -117,7 +117,7 @@ It's best to set up a Dynamic DNS name for your gateway. This way nothing will n
 ## Additional Manual Configuration
 
 The wgadmin app keeps its configuration in /etc/wgadmin.json. There are several additional user changeable parameters that are not represented in the GUI. Be sure to stop the wgadmin service before making changes or they risk being overwritten.
-| ---------- | --------- | ---------- |
+
 | WgInterface | The WireGuard interface name. Defaults to wg0. |
 | HttpListen | The IP and Port running the Web GUI. Defaults to 0.0.0.0:8000. Note: 0.0.0.0 means listen on all interfaces. The app runs as root so ports below 1024 are possible if they are free. e.g. 80 |
 | Username | A blank username will trigger the initialization page. Here you can create a new Username and Password. i.e. This is how you reset a forgotten password. Edit the Username field and set it to `"Username": "",` |
