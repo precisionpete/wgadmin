@@ -53,7 +53,7 @@ the interface managed by WGAdmin. e.g. let WGAdmin manage `wg0` and `wg-quick` m
 By default, WGAdmin listens on 0.0.0.0:8000 but you can change this manually in the `/etc/wgadmin.json` config file.
 
 # Additional Manual Configuration 
-### (required regardless of instll method)
+### (required regardless of install method)
 
 There are a few additional things that need to be configured manually before WireGuard can work on your network.
 
