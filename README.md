@@ -5,7 +5,17 @@ WGAdmin is a free tool that converts a Raspberry Pi single-board computer into a
 
 ![Network Summary](./wgadmin-network.png)
 
+# How it Works
+
 Architecturally, WGAdmin is a configuration management layer wrapped around the standard WireGuard software. It's the missing WireGuard GUI and config generator. Security and heavy lifting is handled by WireGuard natively.
+
+WGAdmin needs to run as a daemon. WGAdmin will be responsible for starting and stopping the WireGuard tunnels. 
+i.e. You do not install `wg-quick@wg0` etc. 
+
+It is possible to use `wg-quick` for other tunnels that are separate from 
+the interface managed by WGAdmin. e.g. let WGAdmin manage `wg0` and `wg-quick` manage `wg1` etc.
+  
+By default, WGAdmin listens on 0.0.0.0:8000 but you can change this manually in the `/etc/wgadmin.json` config file.
 
 ## Debian Based Installation (Debian, Ubuntu, Mint, etc)
 
@@ -42,16 +52,6 @@ Enable and start it (as root)
     systemctl start wgadmin.service
 ```
     
-# How it Works
-
-WGAdmin needs to run as a daemon. WGAdmin will be responsible for starting and stopping the WireGuard tunnels. 
-i.e. You do not install `wg-quick@wg0` etc. 
-
-It is possible to use `wg-quick` for other tunnels that are separate from 
-the interface managed by WGAdmin. e.g. let WGAdmin manage `wg0` and `wg-quick` manage `wg1` etc.
-  
-By default, WGAdmin listens on 0.0.0.0:8000 but you can change this manually in the `/etc/wgadmin.json` config file.
-
 # Additional Manual Configuration 
 ### (required regardless of install method)
 
