@@ -10,9 +10,9 @@ Architecturally, WGAdmin is a configuration management layer wrapped around the 
 ## Debian Based Installation (Debian, Ubuntu, Mint, etc)
 
 WGAdmin is available prepackaged as `.deb` files below. 
-- [wgadmin_0.1.1_arm64.deb](https://dist.2ho.ca/dist/wgadmin/wgadmin_0.1.1_arm64.deb) Debian ARM 64bit
-- [wgadmin_0.1.1_arm64.deb](https://dist.2ho.ca/dist/wgadmin/wgadmin_0.1.1_armhf.deb) Debian ARM 32bit
-- [wgadmin_0.1.1_arm64.deb](https://dist.2ho.ca/dist/wgadmin/wgadmin_0.1.1_amd64.deb) Debian AMD 64bit
+- [wgadmin_0.1.1_arm64.deb](https://dist.2ho.ca/dist/wgadmin/wgadmin_0.1.1_arm64.deb) (ARM 64bit)
+- [wgadmin_0.1.1_arm64.deb](https://dist.2ho.ca/dist/wgadmin/wgadmin_0.1.1_armhf.deb) (ARM 32bit)
+- [wgadmin_0.1.1_arm64.deb](https://dist.2ho.ca/dist/wgadmin/wgadmin_0.1.1_amd64.deb) (AMD 64bit)
 
 The packages are very simple and it can also be installed manually if you prefer.
 
@@ -26,9 +26,9 @@ Be sure the dependancies are satisfied.
 - optionally install `wireguard-tools`
 
 Download the appropriate `wgadmin` binary for your architecture and place is in `/usr/local/bin`
-- [wgadmin](https://dist.2ho.ca/dist/wgadmin/arm64/wgadmin) ARM 64bit
-- [wgadmin](https://dist.2ho.ca/dist/wgadmin/armhf/wgadmin) ARM 32bit
-- [wgadmin](https://dist.2ho.ca/dist/wgadmin/amd64/wgadmin) AMD 64bit
+- [wgadmin](https://dist.2ho.ca/dist/wgadmin/arm64/wgadmin) (ARM 64bit)
+- [wgadmin](https://dist.2ho.ca/dist/wgadmin/armhf/wgadmin) (ARM 32bit)
+- [wgadmin](https://dist.2ho.ca/dist/wgadmin/amd64/wgadmin) (AMD 64bit)
 
 Download the `wgadmin.service` file and place it in `/lib/systemd/system`
 - [wgadmin.service](https://dist.2ho.ca/dist/wgadmin/wgadmin.service)
