@@ -1,4 +1,4 @@
-![WGAdmin Banner](https://2ho.ca/images/wgadmin-128.png)
+![](https://2ho.ca/images/wgadmin-128.png)
 
 # WireGuard Admin App
 **Turn a Raspberry Pi into a simple WireGuard&trade; VPN Appliance**
