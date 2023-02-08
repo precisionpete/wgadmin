@@ -44,11 +44,11 @@ Download the `wgadmin.service` file and place it in `/lib/systemd/system`
 
 Enable and start it (as root)
 ```
-    chown root:root /usr/local/bin/wgadmin
-    chmod 755       /usr/local/bin/wgadmin
-    systemctl daemon-reload
-    systemctl enable wgadmin.service
-    systemctl start wgadmin.service
+chown root:root /usr/local/bin/wgadmin
+chmod 755       /usr/local/bin/wgadmin
+systemctl daemon-reload
+systemctl enable wgadmin.service
+systemctl start wgadmin.service
 ```
     
 # Additional Manual Configuration 
