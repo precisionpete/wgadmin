@@ -16,7 +16,7 @@ WGAdmin is available prepackaged as `.deb` files below.
 
 The packages are very simple and it can also be installed manually if you prefer.
 
-## Generic Linux Installation
+## Generic Linux Installation (non-Debian based)
 
 To install on other distributions...
 
