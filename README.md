@@ -89,12 +89,13 @@ If you want to use this device as a gateway to route all traffic beyond your hom
 In order for return traffic on your network to find its way back to remote peers, you need to set up a static route on the network's gateway. If you just want to reach devices on your home network, this is not necessary.
 
 Add a static route on the network's default gateway as follows: (examples, depending on your type of router):
+(where 192.168.1.99 is the address of the wgadmin device)
 
 ```
-Destination: 192.168.99.0/24 Next hop: 192.168.10.20
+Destination: 192.168.99.0/24 Next hop: 192.168.1.99 (server device)
 
-ip route add 192.168.99.0/24 via 192.168.10.20
-route add dest 192.168.99.0 mask 255.255.255.0 gateway 192.168.10.20 metric 1
+ip route add 192.168.99.0/24 via 192.168.1.99
+route add dest 192.168.99.0 mask 255.255.255.0 gateway 192.168.1.99 metric 1
 ```
 
 ## Port Forward WireGuard on your Gateway
@@ -104,7 +105,7 @@ WireGuard traffic from outside needs to be able to reach this device.
 Forward all external WireGuard connections from the Internet to this device. (example, depending on your type of router):
 
 ```
-From: Any Port: 51821 To: 192.168.10.20 Port: 51821 Protocol: UDP
+From: Any Port: 51821 To: 192.168.1.99 Port: 51821 Protocol: UDP
 ```
 
 ## Configure a Dynamic DNS name
