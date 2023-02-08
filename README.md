@@ -128,3 +128,8 @@ The wgadmin app keeps its configuration in /etc/wgadmin.json. There are several 
   <dt>Password</dt>
   <dd>This stores a bcrypt hash of the password. Setting it to blank will trigger the initialization page as above.</dd>
 </dl>
+
+ID | Name | Rank
+-- | ---- | ----
+1 | Tom Preston-Werner | Awesome
+2 | Albert Einstein | Nearly as awesome
