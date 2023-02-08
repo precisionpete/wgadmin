@@ -50,3 +50,78 @@ i.e. You do not install `wg-quick@wg0` etc.
 It is possible to use `wg-quick` for other tunnels that are separate from 
 the interface managed by WGAdmin. e.g. let WGAdmin manage `wg0` and `wg-quick` manage `wg1` etc.
   
+By default, WGAdmin listens on 0.0.0.0:8000 but you can change this manually in the `/etc/wgadmin.json` config file.
+
+# Additional Manual Configuration (required regardless of instll method)
+
+There are a few additional things that need to be configured manually before WireGuard can work on your network.
+
+## Enable IP Forwarding on this device
+
+If you want to reach other devices on your home network, you must enable IP Forwarding.
+
+Check to see if forwarding is enabled (1 = enabled, 0 = disabled). At a Linux command prompt...
+
+```
+$ sysctl net.ipv4.ip_forward
+net.ipv4.ip_forward = 0
+```
+
+To enable...
+
+```
+$ sudo -i
+password: ********
+# echo net.ipv4.ip_forward = 1 > /etc/sysctl.d/98-wgadmin.conf
+# sysctl -p /etc/sysctl.d/98-wgadmin.conf
+net.ipv4.ip_forward = 1
+# exit
+```
+
+## Enable NAT Masquerading on this device
+
+If you want to use this device as a gateway to route all traffic beyond your home network, you must set up Masquerading.
+
+`Instructions to follow...`
+
+## Add a Static Route on your Gateway
+
+In order for return traffic on your network to find its way back to remote peers, you need to set up a static route on the network's gateway. If you just want to reach devices on your home network, this is not necessary.
+
+Add a static route on the network's default gateway as follows: (examples, depending on your type of router):
+
+```
+Destination: 192.168.99.0/24 Next hop: 192.168.10.20
+
+ip route add 192.168.99.0/24 via 192.168.10.20
+route add dest 192.168.99.0 mask 255.255.255.0 gateway 192.168.10.20 metric 1
+```
+
+## Port Forward WireGuard on your Gateway
+
+WireGuard traffic from outside needs to be able to reach this device.
+
+Forward all external WireGuard connections from the Internet to this device. (example, depending on your type of router):
+
+```
+From: Any Port: 51821 To: 192.168.10.20 Port: 51821 Protocol: UDP
+```
+
+## Configure a Dynamic DNS name
+
+If you do not have a static IP address from your Internet provider, you will need a name to refer back to this network's gateway.
+
+It's best to set up a Dynamic DNS name for your gateway. This way nothing will need to be reconfigured if your address changes.
+
+## Additional Manual Configuration
+
+The wgadmin app keeps its configuration in /etc/wgadmin.json. There are several additional user changeable parameters that are not represented in the GUI. Be sure to stop the wgadmin service before making changes or they risk being overwritten.
+
+WgInterface
+: The WireGuard interface name. Defaults to wg0.
+HttpListen
+: The IP and Port running the Web GUI. Defaults to 0.0.0.0:8000. Note: 0.0.0.0 means listen on all interfaces. The app runs as root so ports below 1024 are possible if they are free. e.g. 80
+Username
+: A blank username will trigger the initialization page. Here you can create a new Username and Password. i.e. This is how you reset a forgotten password. Edit the Username field and set it to "Username": "",
+Password
+: This stores a bcrypt hash of the password. Setting it to blank will trigger the initialization page as above.
