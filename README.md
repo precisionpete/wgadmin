@@ -21,9 +21,9 @@ By default, WGAdmin listens on 0.0.0.0:8000 but you can change this manually in 
 ## Debian Based Installation (Debian, Ubuntu, Mint, etc)
 
 WGAdmin is available prepackaged as `.deb` files below. 
-- [wgadmin_latest_arm64.deb](https://dist.netrinos.com/dist/wgadmin/wgadmin_latest_arm64.deb) (ARM 64bit)
-- [wgadmin_latest_armhf.deb](https://dist.netrinos.com/dist/wgadmin/wgadmin_latest_armhf.deb) (ARM 32bit)
-- [wgadmin_latest_arm64.deb](https://dist.netrinos.com/dist/wgadmin/wgadmin_latest_amd64.deb) (AMD 64bit)
+- [wgadmin_latest_arm64.deb](https://dist.netrinos.com/wgadmin/wgadmin_latest_arm64.deb) (ARM 64bit)
+- [wgadmin_latest_armhf.deb](https://dist.netrinos.com/wgadmin/wgadmin_latest_armhf.deb) (ARM 32bit)
+- [wgadmin_latest_arm64.deb](https://dist.netrinos.com/wgadmin/wgadmin_latest_amd64.deb) (AMD 64bit)
 
 The packages are very simple and it can also be installed manually if you prefer.
 
@@ -37,12 +37,12 @@ Be sure the dependancies are satisfied.
 - optionally install `wireguard-tools`
 
 Download the appropriate `wgadmin` binary for your architecture and place is in `/usr/local/bin`
-- [wgadmin](https://dist.netrinos.com/dist/wgadmin/arm64/wgadmin) (ARM 64bit)
-- [wgadmin](https://dist.netrinos.com/dist/wgadmin/armhf/wgadmin) (ARM 32bit)
-- [wgadmin](https://dist.netrinos.com/dist/wgadmin/amd64/wgadmin) (AMD 64bit)
+- [wgadmin](https://dist.netrinos.com/wgadmin/arm64/wgadmin) (ARM 64bit)
+- [wgadmin](https://dist.netrinos.com/wgadmin/armhf/wgadmin) (ARM 32bit)
+- [wgadmin](https://dist.netrinos.com/wgadmin/amd64/wgadmin) (AMD 64bit)
 
 Download the `wgadmin.service` file and place it in `/lib/systemd/system`
-- [wgadmin.service](https://dist.netrinos.com/dist/wgadmin/wgadmin.service)
+- [wgadmin.service](https://dist.netrinos.com/wgadmin/wgadmin.service)
 
 Enable and start it
 ```
