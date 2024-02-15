@@ -21,9 +21,9 @@ By default, WGAdmin listens on 0.0.0.0:8000 but you can change this manually in 
 ## Debian Based Installation (Debian, Ubuntu, Mint, etc)
 
 WGAdmin is available prepackaged as `.deb` files below. 
-- [wgadmin_0.1.1_arm64.deb](https://dist.2ho.ca/dist/wgadmin/wgadmin_0.1.1_arm64.deb) (ARM 64bit)
-- [wgadmin_0.1.1_armhf.deb](https://dist.2ho.ca/dist/wgadmin/wgadmin_0.1.1_armhf.deb) (ARM 32bit)
-- [wgadmin_0.1.1_arm64.deb](https://dist.2ho.ca/dist/wgadmin/wgadmin_0.1.1_amd64.deb) (AMD 64bit)
+- [wgadmin_latest_arm64.deb](https://dist.2ho.ca/dist/wgadmin/wgadmin_latest_arm64.deb) (ARM 64bit)
+- [wgadmin_latest_armhf.deb](https://dist.2ho.ca/dist/wgadmin/wgadmin_latest_armhf.deb) (ARM 32bit)
+- [wgadmin_latest_arm64.deb](https://dist.2ho.ca/dist/wgadmin/wgadmin_latest_amd64.deb) (AMD 64bit)
 
 The packages are very simple and it can also be installed manually if you prefer.
 
